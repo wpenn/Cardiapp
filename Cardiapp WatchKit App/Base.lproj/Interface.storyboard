@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Cardiapp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="yDQ-KR-MXR">
+                            <items>
+                                <imageView width="28" height="22" alignment="left" image="watchlogo" id="amx-TB-hyL"/>
+                                <label height="22" alignment="left" text="Cardiapp" id="of7-S1-taQ"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="2fz-Tz-bkQ"/>
+                        <group width="1" height="49" alignment="left" id="8UM-yS-vrX">
+                            <items>
+                                <label width="71" height="51" alignment="left" text="♥" textAlignment="right" id="E3i-h3-4vm">
+                                    <fontDescription key="font" type="system" pointSize="67"/>
+                                </label>
+                                <label width="59" height="52" alignment="left" verticalAlignment="center" text="---" textAlignment="left" id="p9c-K6-uCS">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label width="131" height="19" alignment="left" id="oFS-Lh-nyE"/>
+                        <group width="1" alignment="left" id="AYa-70-H6A">
+                            <items>
+                                <timer width="59" height="36" alignment="left" previewedSeconds="0" id="adZ-hN-x7z"/>
+                                <button width="72" alignment="left" title="Start" id="cQw-Fc-ZPd">
+                                    <connections>
+                                        <action selector="startBtnTapped" destination="AgC-eL-Hgc" id="pZT-CU-NCx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="ExerTimer" destination="adZ-hN-x7z" id="r7H-oZ-IF4"/>
+                        <outlet property="exerState" destination="oFS-Lh-nyE" id="Rft-Pt-hQW"/>
+                        <outlet property="heartIndicator" destination="E3i-h3-4vm" id="5op-la-T00"/>
+                        <outlet property="label" destination="p9c-K6-uCS" id="6eh-VB-fSo"/>
+                        <outlet property="startStopButton" destination="cQw-Fc-ZPd" id="9Kq-PZ-jng"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="339"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Cardiapp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

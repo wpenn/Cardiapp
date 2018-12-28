@@ -1,0 +1,17 @@
+PODS:
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - JTAppleCalendar (7.1.5)
+
+DEPENDENCIES:
+  - Charts
+  - JTAppleCalendar (~> 7.0)
+
+SPEC CHECKSUMS:
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+
+PODFILE CHECKSUM: be6525528524088f22a58ee45b0def06a0440b98
+
+COCOAPODS: 1.3.1
